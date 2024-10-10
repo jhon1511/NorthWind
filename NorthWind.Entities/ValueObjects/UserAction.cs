@@ -14,6 +14,4 @@ namespace NorthWind.Entities.ValueObjects
 
     }
 
-
-
 }
