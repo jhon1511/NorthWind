@@ -1,15 +1,16 @@
-﻿
-using NorthWind.Entities.Interfaces;
-using NorthWind.Entities.ValueObjects;
+﻿using NorthWind.Entities.Interfaces;
+using NorthWind.Entities.ValueObject;
 
-
-namespace NorthWind.Writers;
-internal class ConsoleWriter : IUserActionWriter
-{   
-    public void Write(UserAction action) 
+namespace NorthWind.Writers
+{
+    internal class ConsoleWriter : IUserActionWriter
     {
-        Console.WriteLine("consoleWriter: {0}, {1}, {2}",
-            action.CreateDateTime, action.User, action.Description);
-    }
+        public void Write(UserAction action)
+        {
+            Console.WriteLine("ConsolerWriter: {0}, {1}, {2}",
+                action.CreateDateTime, action.User, action.Description);
 
+        }
+
+    }
 }

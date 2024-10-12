@@ -1,13 +1,16 @@
 ﻿using NorthWind.Entities.Interfaces;
+using NorthWind.Entities.ValueObject;
 using NorthWind.Entities.ValueObjects;
 
-namespace NorthWind.Core.Services;
-internal class AppLogger(IEnumerable<IUserActionWriter> writers) : IAppLogger
+namespace NorthWind.Core.Services
 {
-    public void WriteLog(string message)
+    internal class AppLogger(IEnumerable<IUserActionWriter> writers) : IAppLogger
     {
-        UserAction Log = new UserAction("System", message);
-        foreach (var Writer in writers)
-            Writer.Write(Log);
+        public void WriteLog(string message)
+        {
+            UserAction log = new UserAction("System", message);
+            foreach (var writer in writers)
+                writer.Write(log);
+        }
     }
 }

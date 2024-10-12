@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using NorthWind.Core.Services;
+﻿using NorthWind.Core.Services;
 using NorthWind.Entities.Interfaces;
 
 namespace Microsoft.Extensions.DependencyInjection;

@@ -1,6 +1,6 @@
 ﻿using NorthWind.Entities.Interfaces;
+using NorthWind.Entities.ValueObject;
 using NorthWind.Entities.ValueObjects;
-
 
 namespace NorthWind.Core.Services
 {
@@ -8,7 +8,8 @@ namespace NorthWind.Core.Services
     {
         public void Add(string user, string productName)
         {
-            UserAction Action = new UserAction(user, $"Created:{productName}");
+
+            UserAction Action = new UserAction(user, $"Created: {productName}");
             writer.Write(Action);
         }
     }

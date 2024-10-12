@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace NorthWind.Entities.Interfaces
 {
-    internal interface AppLogger
+    public interface IAppLogger
     {
-
+        void WriteLog(string message);
     }
 }

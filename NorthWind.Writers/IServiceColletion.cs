@@ -2,4 +2,8 @@
 
 public static partial class DependecyContainer
 {
-    public static class IServiceColletion }
+    public static class IServiceColletion
+    {
+
+    }
+}
